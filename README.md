@@ -12,7 +12,7 @@ This Jupyter Notebook demonstrates how to interact with the Binance API, process
 
 ## Jupyter Notebook
 
-The notebook containing the script can be found [here]([https://github.com/mateobelossi/EntregableBelossi.ipynb/blob/main/pre_entrega_script.ipynb](https://github.com/mateobelossi/CoderDataEngineering/blob/main/EntregableBelossi.ipynb).
+The notebook containing the script can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/EntregableBelossi.ipynb).
 
 ## CSV Output
 
