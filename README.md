@@ -16,6 +16,6 @@ The notebook containing the script can be found [here](https://github.com/mateob
 
 ## CSV Output
 
-The CSV file containing the processed data can be found [here](path_to_csv_file.csv).
+The CSV file containing the processed data can be found [here]([path_to_csv_file.csv](https://github.com/mateobelossi/EntregableBelossi.ipynb/blob/main/20240401_125605_mercado_binance.csv)).
 
 
