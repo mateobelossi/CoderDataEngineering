@@ -15,11 +15,13 @@ This Jupyter Notebook demonstrates how to interact with the Binance API, process
 ## Jupyter Notebook
 
 The notebook containing first preliminary delivery script can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/EntregableBelossi.ipynb).
+
 The notebook containing second preliminary delivery script can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/EntregableBelossi_Segunda_Pre_Entrega.ipynb).
 
 ## CSV Output
 
 The CSV file from first preliminary delivery can be found [here](https://github.com/mateobelossi/EntregableBelossi.ipynb/blob/main/20240401_180736_mercado_binance.csv).
+
 The CSV file from second preliminary delivery can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/20240425_021723_mercado_binance.csv).
 
 
