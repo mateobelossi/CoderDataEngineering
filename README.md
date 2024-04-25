@@ -14,7 +14,7 @@ This Jupyter Notebook demonstrates how to interact with the Binance API, process
 
 ## Jupyter Notebook
 
-The notebook containing first preliminary delivery script can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/EntregableBelossi.ipynb).
+The notebook containing first preliminary delivery script can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/EntregableBelossi_Primera_Pre_Entrega.ipynb).
 
 The notebook containing second preliminary delivery script can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/EntregableBelossi_Segunda_Pre_Entrega.ipynb).
 
