@@ -22,6 +22,6 @@ The notebook containing second preliminary delivery script can be found [here](h
 
 The CSV file from first preliminary delivery can be found [here](https://github.com/mateobelossi/EntregableBelossi.ipynb/blob/main/20240401_180736_mercado_binance.csv).
 
-The CSV file from second preliminary delivery can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/20240425_021723_mercado_binance.csv).
+The CSV file from second preliminary delivery can be found [here](https://github.com/mateobelossi/CoderDataEngineering/blob/main/20240425_023510_mercado_binance.csv).
 
 
