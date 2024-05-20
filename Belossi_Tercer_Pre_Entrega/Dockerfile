@@ -12,7 +12,6 @@ COPY python_scripts /opt/airflow/python_scripts
 COPY dags /opt/airflow/dags
 COPY logs /opt/airflow/logs
 COPY plugins /opt/airflow/plugins
-COPY binance /opt/airflow/binance
 
 
 
