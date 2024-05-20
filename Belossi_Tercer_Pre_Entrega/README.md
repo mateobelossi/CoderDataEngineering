@@ -1,8 +1,9 @@
-# Running script_Belossi_Pre_Entrega3.py with Docker Compose
+# Running Airflow DAG with Docker Compose
 
 ## Prerequisites
 
 - Docker installed on your machine. You can download Docker from [here](https://www.docker.com/get-started).
+- Airflow environment configured with Docker Compose. You can use the configuration provided in this repository.
 
 ## Getting Started
 
@@ -18,11 +19,18 @@
     cd CoderDataEngineering/Belossi_Tercer_Pre_Entrega
     ```
 
-3. Build and start the Docker container:
+3. Start the Airflow environment with Docker Compose:
 
     ```sh
-    docker-compose build
     docker-compose up
     ```
 
-This will build the Docker image and start the container, which will execute the `script_Belossi_Pre_Entrega3.py` script inside the container using the BashOperator.
+4. Access the Airflow web interface in your browser by visiting [http://localhost:8080](http://localhost:8080).
+
+5. In the Airflow web interface, enable the `Belossi_Pre_Entrega3` DAG.
+
+6. Trigger the DAG manually or let it run according to its schedule. The DAG will execute the `script_Belossi_Pre_Entrega3.py` script using a BashOperator.
+
+7. Monitor the progress and logs of the DAG execution in the Airflow web interface.
+
+8. After the DAG has completed successfully, you can view the results or any generated output as per the script's functionality.
