@@ -33,17 +33,17 @@ with DAG(
     task1 = BashOperator(
         task_id='get_binance_coins_values',
         bash_command='''\
-            export DBNAME_REDSHIFT="data-engineer-database" && \
-            export SCHEMA_NAME_REDSHIFT="mateobelossi_coderhouse" && \
-            export USER_REDSHIFT="mateobelossi_coderhouse" && \
-            export PASS_REDSHIFT="{{ var.value.PASSWORD_REDSHIFT }}" && \
-            export HOST_REDSHIFT="data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com" && \
-            export PORT_REDSHIFT="5439" && \
-            export TABLE_NAME_REDSHIFT="binance_coins" && \
-            export DS_DATE="{{ ds }}" && \
-            export DS_TOMORROW="{{ macros.ds_add(ds, 1) }}" && \
+            export DBNAME_REDSHIFT={{ var.value.DBNAME_REDSHIFT }} && \
+            export SCHEMA_NAME_REDSHIFT={{ var.value.SCHEMA_NAME_REDSHIFT }} && \
+            export USER_REDSHIFT={{ var.value.USER_REDSHIFT }} && \
+            export PASS_REDSHIFT={{ var.value.PASSWORD_REDSHIFT }} && \
+            export HOST_REDSHIFT={{ var.value.HOST_REDSHIFT }} && \
+            export PORT_REDSHIFT={{ var.value.PORT_REDSHIFT }} && \
+            export TABLE_NAME_REDSHIFT={{ var.value.TABLE_NAME_REDSHIFT }} && \
+            export DS_DATE={{ ds }} && \
+            export DS_TOMORROW={{ macros.ds_add(ds, 1) }} && \
             python /opt/airflow/python_scripts/script_Belossi_Pre_Entrega3.py
-        ''',
+        '''
     )
 
     start >> task1 >> end
