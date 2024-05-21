@@ -4,8 +4,6 @@ from airflow.operators.bash import BashOperator
 from airflow.models import Variable
 from datetime import datetime
 
-#PASSWORD_REDSHIFT = Variable.get("PASSWORD_REDSHIFT")
-
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
