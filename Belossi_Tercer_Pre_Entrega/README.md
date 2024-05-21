@@ -27,10 +27,14 @@
 
 4. Access the Airflow web interface in your browser by visiting [http://localhost:8080](http://localhost:8080).
 
-5. In the Airflow web interface, enable the `Belossi_Pre_Entrega3` DAG.
+5. Ensure the necessary Airflow variables are set. Refer to the image below for the required variables configuration:
 
-6. Trigger the DAG manually or let it run according to its schedule. The DAG will execute the `script_Belossi_Pre_Entrega3.py` script using a BashOperator.
+    ![Airflow Variables](https://github.com/mateobelossi/CoderDataEngineering/blob/main/Belossi_Tercer_Pre_Entrega/airflow_variables.png)
 
-7. Monitor the progress and logs of the DAG execution in the Airflow web interface.
+6. In the Airflow web interface, enable the `Belossi_Pre_Entrega3` DAG.
 
-8. After the DAG has completed successfully, you can view the results or any generated output as per the script's functionality.
+7. Trigger the DAG manually or let it run according to its schedule. The DAG will execute the `script_Belossi_Pre_Entrega3.py` script using a BashOperator.
+
+8. Monitor the progress and logs of the DAG execution in the Airflow web interface.
+
+9. After the DAG has completed successfully, you can view the results or any generated output as per the script's functionality.
