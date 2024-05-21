@@ -14,6 +14,8 @@ PASS_REDSHIFT=os.getenv('PASS_REDSHIFT')
 HOST_REDSHIFT=os.getenv('HOST_REDSHIFT')
 PORT_REDSHIFT=os.getenv('PORT_REDSHIFT')
 TABLE_NAME_REDSHIFT=os.getenv('TABLE_NAME_REDSHIFT')
+DS_DATE=os.getenv('DS_DATE')
+DS_TOMORROW=os.getenv('DS_TOMORROW')
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.info("Libraries calls ok")
@@ -220,14 +222,12 @@ def create_table_if_not_exists(schema_name_redshift,table_name_redshift):
         if conn:
             conn.close()
 
-def insert_data_into_redshift(conn, schema_name, table_name, df, insert_query):
+def insert_data_into_redshift(conn, df, insert_query):
     """
     Inserts data into a Redshift table.
 
     Parameters:
         conn (psycopg2.connection): The connection object for the Redshift database.
-        schema_name (str): The name of the schema where the table resides.
-        table_name (str): The name of the table to insert data into.
         data (list of tuples): The data to be inserted into the table. Each tuple represents a row.
 
     Returns:
@@ -307,11 +307,8 @@ def main():
             result = r.json()
             result_df = pd.json_normalize(result)
 
-            logging.info("Adding a column named 'created_at' with the current time.")
-            current_date = datetime.now()
-            created_at = current_date.strftime("%Y-%m-%d")
-            created_at_tomorrow = (current_date + timedelta(days=1)).strftime("%Y-%m-%d")
-            result_df['created_at'] = created_at
+            logging.info("Adding a column named 'created_at' with the DS_DATE.")
+            result_df['created_at'] = DS_DATE
 
             logging.info("Cleaning data form dataframe...")
             result_df = clean_data_and_drop_duplicates_if_exits(result_df)
@@ -320,8 +317,8 @@ def main():
             
             query = f"""
                 DELETE FROM {SCHEMA_NAME_REDSHIFT}.{TABLE_NAME_REDSHIFT}
-                WHERE created_at >= '{created_at}'::timestamp and
-                created_at < '{created_at_tomorrow}'::timestamp
+                WHERE created_at >= '{DS_DATE}'::timestamp and
+                created_at < '{DS_TOMORROW}'::timestamp
             """
             logging.info(f"{query}")
             execute_query(conn, query)
@@ -330,7 +327,7 @@ def main():
             
             create_table_if_not_exists(SCHEMA_NAME_REDSHIFT,TABLE_NAME_REDSHIFT)
             #truncate_table_if_exists(SCHEMA_NAME_REDSHIFT, TABLE_NAME_REDSHIFT)            
-            insert_data_into_redshift(conn, SCHEMA_NAME_REDSHIFT, TABLE_NAME_REDSHIFT, result_df, INSERT_QUERY)
+            insert_data_into_redshift(conn, result_df, INSERT_QUERY)
 
         else:
             logging.info(f"Unable to connect to Binance; Requests Status: {r.status_code}")
