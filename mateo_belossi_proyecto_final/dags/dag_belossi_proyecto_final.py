@@ -1,7 +1,6 @@
 from airflow import DAG
 from airflow.operators.dummy import DummyOperator
 from airflow.operators.bash import BashOperator
-from airflow.models import Variable
 from datetime import datetime
 
 default_args = {
