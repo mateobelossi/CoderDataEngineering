@@ -38,7 +38,10 @@
     docker-compose up --build
     ```
 
-4. Access the Airflow web interface in your browser by visiting [http://localhost:8080](http://localhost:8080).
+4. Access the Airflow web interface in your browser by visiting [http://localhost:8080](http://localhost:8080). Use the following credentials:
+
+   - Username: `airflow`
+   - Password: `airflow`
 
 5. Ensure the necessary Airflow variables are set. Refer to the image below for the required variables configuration:
 
