@@ -64,4 +64,4 @@
 - Insert data from API to Redshift.
 - Second source of data: read a JSON file from [alerts/alerts.json](https://github.com/mateobelossi/CoderDataEngineering/blob/main/mateo_belossi_proyecto_final/alerts/alerts.json) where for each coin_pair there is a min_price and a max_price.
 - The check_price_alerts function examines each coin pair in the provided dataframe for any price alerts.It compiles all the detected alerts into a single text message for easy review. If no alerts are found, the function returns None to indicate the absence of any alerts.
-- If there exists any alerts then send an email with the body of all the alerts detected.
+- If the function detects any price alerts, it automatically composes an email containing the details of all the alerts found. The email body includes a summary of each alert, making it easy to understand the current status of the coin pairs. If no alerts are detected, the function does not send any email.
