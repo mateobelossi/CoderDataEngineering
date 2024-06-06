@@ -25,6 +25,19 @@
     docker-compose up
     ```
 
+    If you need to rebuild the images, use:
+
+    ```sh
+    docker-compose build
+    docker-compose up
+    ```
+
+    Or, to force a rebuild of the images before starting the containers:
+
+    ```sh
+    docker-compose up --build
+    ```
+
 4. Access the Airflow web interface in your browser by visiting [http://localhost:8080](http://localhost:8080).
 
 5. Ensure the necessary Airflow variables are set. Refer to the image below for the required variables configuration:
