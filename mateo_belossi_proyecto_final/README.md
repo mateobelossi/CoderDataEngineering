@@ -31,9 +31,9 @@
 
     ![Airflow Variables](https://github.com/mateobelossi/CoderDataEngineering/blob/main/mateo_belossi_proyecto_final/airflow_variables.png)
 
-6. In the Airflow web interface, enable the `Belossi_Pre_Entrega3` DAG.
+6. In the Airflow web interface, enable the `mateo_belossi_proyecto_final` DAG.
 
-7. Trigger the DAG manually or let it run according to its schedule. The DAG will execute the `script_Belossi_Pre_Entrega3.py` script using a BashOperator.
+7. Trigger the DAG manually or let it run according to its schedule. The DAG will execute the `mateo_belossi_proyecto_final.py` script using a BashOperator.
 
 8. Monitor the progress and logs of the DAG execution in the Airflow web interface.
 
