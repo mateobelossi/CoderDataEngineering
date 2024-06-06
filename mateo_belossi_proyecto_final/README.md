@@ -29,7 +29,7 @@
 
 5. Ensure the necessary Airflow variables are set. Refer to the image below for the required variables configuration:
 
-    ![Airflow Variables](https://github.com/mateobelossi/CoderDataEngineering/blob/main/Belossi_Tercer_Pre_Entrega/airflow_variables.png)
+    ![Airflow Variables](https://github.com/mateobelossi/CoderDataEngineering/blob/main/mateo_belossi_proyecto_final/airflow_variables.png)
 
 6. In the Airflow web interface, enable the `Belossi_Pre_Entrega3` DAG.
 
