@@ -11,7 +11,6 @@ from psycopg2 import OperationalError
 from psycopg2.extras import execute_values
 from datetime import datetime
 
-
 DBNAME_REDSHIFT = os.getenv('DBNAME_REDSHIFT')
 HOST_REDSHIFT = os.getenv('HOST_REDSHIFT')
 PASS_REDSHIFT = os.getenv('PASS_REDSHIFT')
