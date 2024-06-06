@@ -61,7 +61,7 @@
 - Include a column "created_at" to df in the obtained results. (symbol and created_at is the composite key)
 - Clean data and drop duplicates from the response received from the Binance API.
 - Delete from Redshift any rows where created_at equals the current day of execution to prevent duplicates.
-- Insert data from API to into Redshift.
+- Insert data from API to Redshift.
 - Second source of data: read a JSON file from [alerts/alerts.json](https://github.com/mateobelossi/CoderDataEngineering/blob/main/mateo_belossi_proyecto_final/alerts/alerts.json) where for each coin_pair there is a min_price and a max_price.
 - Using the function check_price_alerts, it checks for price alerts for each coin pair in the dataframe and returns a single text with all results.
   Returns None if there are no alerts.
