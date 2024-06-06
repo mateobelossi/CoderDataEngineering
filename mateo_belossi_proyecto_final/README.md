@@ -16,7 +16,7 @@
 2. Navigate to the cloned repository and the specific directory:
 
     ```sh
-    cd CoderDataEngineering/Belossi_Tercer_Pre_Entrega
+    cd CoderDataEngineering/mateo_belossi_proyecto_final
     ```
 
 3. Start the Airflow environment with Docker Compose:
