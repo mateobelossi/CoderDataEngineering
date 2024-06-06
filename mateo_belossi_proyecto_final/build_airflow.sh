@@ -1,1 +1,0 @@
-docker build -t my_airflow_image .
