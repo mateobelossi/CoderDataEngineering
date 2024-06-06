@@ -450,7 +450,8 @@ def main():
             conn = connect_to_redshift(
                 HOST_REDSHIFT, DBNAME_REDSHIFT, USER_REDSHIFT, PASS_REDSHIFT, PORT_REDSHIFT)
 
-            logging.info(f"DELETE EXISTING DATA WHERE created_at EQUALS {DS_DATE} IN REDSHIFT TO PREVENT DUPLICATES BEFORE INSERTING NEW DATA.")
+            logging.info(
+                f"DELETE EXISTING DATA WHERE created_at EQUALS {DS_DATE} IN REDSHIFT TO PREVENT DUPLICATES BEFORE INSERTING NEW DATA.")
             query = f"""
                 DELETE FROM {SCHEMA_NAME_REDSHIFT}.{TABLE_NAME_REDSHIFT}
                 WHERE created_at >= '{DS_DATE}'::timestamp and
