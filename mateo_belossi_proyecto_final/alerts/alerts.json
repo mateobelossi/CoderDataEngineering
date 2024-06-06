@@ -1,0 +1,10 @@
+{
+    "BTCUSDT": {
+        "min_price": 72000,
+        "max_price": 73000
+    },
+    "ETHUSDT": {
+        "min_price": 3500,
+        "max_price": 3800
+    }
+}
