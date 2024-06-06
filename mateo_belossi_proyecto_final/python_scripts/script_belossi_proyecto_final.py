@@ -470,8 +470,12 @@ def main():
             alerts = check_price_alerts(df, result_df)
             logging.info(alerts)
 
-            logging.info("Sending alerts...")
-            send_email("There exists alerts.", f"{alerts}")
+            logging.info("Send alerts if at least one alert exists...")
+            if alerts:
+                logging.info("Alerts exist, sending email...")
+                send_email("There exists alerts.", f"{alerts}")
+            else:
+                logging.info("No alerts exist, so the email is not sent.")
 
         else:
             logging.info(
