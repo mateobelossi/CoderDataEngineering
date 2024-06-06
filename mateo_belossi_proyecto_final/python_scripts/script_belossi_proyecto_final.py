@@ -464,7 +464,6 @@ def main():
 
             create_table_if_not_exists(
                 SCHEMA_NAME_REDSHIFT, TABLE_NAME_REDSHIFT)
-            # truncate_table_if_exists(SCHEMA_NAME_REDSHIFT, TABLE_NAME_REDSHIFT)
             insert_data_into_redshift(conn, result_df, INSERT_QUERY)
             logging.info("Reading json alerts...")
             df = read_json_to_dataframe('/opt/airflow/alerts/alerts.json')
